@@ -58,18 +58,6 @@ export VERSION="1.1"
 # // Exporint IP AddressInformation
 export IP=$( curl -s https://ipinfo.io/ip/ )
 
-# // License Validating
-echo ""
-read -p "Input Your License Key : " Input_License_Key
-
-# // Checking Input Blank
-if [[ $Input_License_Key ==  "" ]]; then
-    echo -e "${EROR} Please Input License Key !${NC}"
-    exit 1
-fi
-
-# // Checking License Validate
-Key="$Input_License_Key"
 
 # // Set Time To Jakarta / GMT +7
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
